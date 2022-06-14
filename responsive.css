@@ -1,34 +1,41 @@
-/* For bigger screens */
-
 @media screen and (min-width: 400px) {
-  img { margin-left: 5px; }
-  .play-label { margin-left: 8px; }
-  .numbers { margin-left: 23px; }
+  img { margin-left: 20px; }
+  .play-label { margin-left: 22px; }
+  .numbers { margin-left: 34px; }
   .hold { bottom: 30px; }
 }
 
 @media screen and (min-width: 500px) {
-  img { margin-left: 18px; }
-  .play-label { margin-left: 20px; }
-  .numbers { margin-left: 37px; }
+  img { margin-left: 35px; }
+  .play-label { margin-left: 35px; }
+  .numbers { margin-left: 45px; }
   .new { left: 40%; }
   .roll { left: 40%; }
   .hold { left: 43%; }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 650px) {
   .container-md { min-height: 80%; }
   .row { height: 90vh; }
   .player-area-0, .player-area-1 { height: 100%; }
-  .play-label { margin-left: 35px; margin-top: 40px; font-size: 25px; transition: 0.8s; }
+  .play-label { margin-left: 35px; margin-top: 70px; font-size: 25px; transition: 0.8s; }
   .play-label:hover {
     background-color: #eb2121;
     color: white;
     font-weight: 900;
   }
   
-  .numbers { margin-left: 55px; margin-top: 40px; }
-  img { margin-left: 33px; margin-top: 20px; }
+  .numbers { 
+    margin-left: 50px; 
+    margin-top: 60px; 
+    font-size: 70px;
+  }
+  img { 
+    height: 75px;
+    width: 75px;
+    margin-top: 55px;
+    margin-right: 10px;
+  }
   .new { top: 5%; left: 42%; }
   .roll { bottom: 30%; left: 42%; }
   .hold { bottom: 21%; left: 45%; }
@@ -46,7 +53,32 @@
 
 @media screen and (min-width: 1024px) {
   .play-label { 
+    margin-top: 120px;
     margin-left: 80px;
     padding: 5px 15px;
   }
+
+  .numbers {
+    margin-left: 110px; 
+    margin-top: 120px; 
+    font-size: 70px;
+  }
+
+  img { 
+    height: 120px;
+    width: 120px;
+    margin-top: 120px;
+    margin-left: 72px;
+    border-radius: 10px;
+  }
+
+  .player-name { font-size: 3rem; }
+  .globalScore { font-size: 6rem; }
+
+  .new, .roll, .hold { font-size: 20px; } 
+  .new > i { font-size: 22px; }
+  i { font-size: 25px; margin-right: 10px; }
+  .new { top: 5%; left: 44%; }
+  .roll { bottom: 30%; left: 44%; }
+  .hold { bottom: 21%; left: 46%; }
 }

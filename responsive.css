@@ -1,0 +1,52 @@
+/* For bigger screens */
+
+@media screen and (min-width: 400px) {
+  img { margin-left: 5px; }
+  .play-label { margin-left: 8px; }
+  .numbers { margin-left: 23px; }
+  .hold { bottom: 30px; }
+}
+
+@media screen and (min-width: 500px) {
+  img { margin-left: 18px; }
+  .play-label { margin-left: 20px; }
+  .numbers { margin-left: 37px; }
+  .new { left: 40%; }
+  .roll { left: 40%; }
+  .hold { left: 43%; }
+}
+
+@media screen and (min-width: 768px) {
+  .container-md { min-height: 80%; }
+  .row { height: 90vh; }
+  .player-area-0, .player-area-1 { height: 100%; }
+  .play-label { margin-left: 35px; margin-top: 40px; font-size: 25px; transition: 0.8s; }
+  .play-label:hover {
+    background-color: #eb2121;
+    color: white;
+    font-weight: 900;
+  }
+  
+  .numbers { margin-left: 55px; margin-top: 40px; }
+  img { margin-left: 33px; margin-top: 20px; }
+  .new { top: 5%; left: 42%; }
+  .roll { bottom: 30%; left: 42%; }
+  .hold { bottom: 21%; left: 45%; }
+
+  /* Font-Sizes */
+  .player-name { font-size: 2rem; }
+  .globalScore { font-size: 5rem; }
+  .new, .roll, .hold { font-size: 15px; } 
+
+  /* Current Boxes */
+  .current-box { width: 7rem; height: 5rem; }
+  .current-label { font-size: 0.8rem; margin-top: 5px; }
+  .roundScore { font-size: 2rem; margin-top: 5px; }
+}
+
+@media screen and (min-width: 1024px) {
+  .play-label { 
+    margin-left: 80px;
+    padding: 5px 15px;
+  }
+}

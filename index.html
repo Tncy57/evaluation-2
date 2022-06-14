@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+    crossorigin="anonymous">
+  <!--Font Family-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+
+  <!--CSS-->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
+  <!--Bootstrap Icon-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
+  <title>Dice Game</title>
+</head>
+<body>
+  
+  <div class="container-md">
+
+    <div class="row ">
+      
+      <!-- Player 1 Start -->
+      <div class="col player-area-0 active">
+        <div>
+          <div class="text-center mb-0 player-name active-0 active-point" id="name-0">PLAYER 1</div> 
+          <div class="d-block text-center globalScore" id="global-0">0</div>
+        </div>
+        <div class="text-center current-box">
+          <div class="fw-bolder current-label">CURRENT</div>
+          <div class="roundScore" id="round-player-0">0</div>
+        </div>
+      </div>
+      <!-- Player 1 End -->
+
+      <!-- Player 2 Start -->
+    <div class="col player-area-1">
+      <div>
+        <div class="text-center mb-0 player-name active-1" id="name-1">PLAYER 2</div> 
+        <div class="d-block text-center globalScore" id="global-1">0</div>
+      </div>
+      <div class="text-center current-box">
+        <div class="fw-bolder current-label">CURRENT</div>
+        <div class="roundScore" id="round-player-1">0</div>
+      </div>
+    </div>
+    <!-- Player 2 End -->
+  </div>
+
+      <!-- Buttons and Images Start -->
+      <div class="tools text-center">
+        <div class="new" id="new"><i class="bi bi-plus-circle"></i>New Game</div>
+        <div class="diceWrapper">
+          <div class="play-label" id="play">PLAY</div>
+          <div class="numbers" id="three">3</div>
+          <div class="numbers" id="two">2</div>
+          <div class="numbers" id="one">1</div>
+         <img src="diceImg/dice5.png" alt="Dice Image" id="dice-image">
+      </div>
+      <div class="roll-hold">
+        <div class="roll" id="roll"><i class="bi bi-arrow-repeat"></i>Roll Dice</div>
+        <div class="hold" id="hold"><i class="bi bi-box-arrow-in-down"></i>Hold</div>
+      </div>
+    </div>
+    <!-- Buttons and Images End -->
+
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+          crossorigin="anonymous">
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

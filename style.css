@@ -1,0 +1,125 @@
+* {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  }
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(45deg, rgb(206, 197, 152), rgb(203, 190, 135), rgb(173, 124, 85));
+}
+
+
+.container-md {
+  position: relative;
+  background-color: white;
+}
+
+.active {
+  background-color: rgb(237, 234, 234);
+}
+
+.active div .player-name {
+  font-weight: bold;
+}
+
+.active-point::after {
+  content: "\2022";
+  color: #eb2121;
+  display: inline-block; 
+  width: 1em;
+  margin-right: -1em
+}
+
+.player-area-0, .player-area-1 {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.player-name {
+  font-size: 1.5rem;
+  color: rgb(105, 105, 105);
+  letter-spacing: 1px;
+}
+
+.globalScore {
+  font-size: 3rem;
+  color:#eb5454;
+}
+
+.current-box {
+  /*width: 40%;*/
+  background-color:#eb5454;
+  width: 5rem;
+  margin: 0 auto;
+}
+
+.current-label {
+  font-size: 0.7rem;
+  color: rgb(81, 72, 72);
+}
+
+.roundScore{
+  font-size: 1.7rem;
+  font-weight: 300;
+  color: white;
+}
+
+img {
+  height: 75px;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+  border-radius: 4px;
+}
+
+.diceWrapper {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+}
+
+.new, .roll, .hold {
+  cursor: pointer;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.new { top: 2%; left: 36%; }
+.roll { bottom: 70px; left: 36%; }
+.hold { bottom: 25px; left: 40%; }
+
+i {
+  font-size: 1rem;
+  color: #eb5454;
+  margin-right: 5px;
+}
+
+.winner {
+  font-weight: 800;
+  color: #eb5454;
+}
+
+.play-label {
+  cursor: pointer;
+  color: #eb5454;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border: 2px solid #eb5454;
+  padding: 0 5px;
+  border-radius: 15px;
+}
+
+.numbers {
+  display: none;
+  color: #eb5454;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.play-label { margin-left: 15px; }
+.numbers { margin-left: 23px; }

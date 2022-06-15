@@ -8,10 +8,15 @@ let isGameOver, globalScores, roundScore, activePlayer;
 const play = document.querySelector("#play");
 play.style.display = "none";
 
+
+
 const countDown = () => {
   document.querySelector("#play").remove();
-
+  
+  let countSound = new Audio("sounds/count-sound.wav")
+  
   setTimeout(() => {
+    countSound.play();
     document.querySelector("#three").style.display = "block";
     setTimeout(() => {
       document.querySelector("#three").style.display = "none";
@@ -53,13 +58,18 @@ function startGame() {
 
 startGame();
 
-
-
-// play.addEventListener("click", counter);
+// Putting dice and count sound
+let diceSound = new Audio("sounds/dice-sound.wav");
+let lostRoundSound = new Audio("sounds/lost-round.wav");
+let holdScoreSound = new Audio("sounds/hold-score.wav");
+let winnerSound =  new Audio("sounds/winner-sound.wav");
 
 const rollDice = () => {
   
    if(!isGameOver) {
+
+    diceImg.classList.toggle("animation");
+    diceSound.play();
 
     setTimeout(() => {
       const randomNumber = Math.floor(Math.random() * 6) + 1; 
@@ -67,20 +77,26 @@ const rollDice = () => {
       if(randomNumber !== 1) {
         roundScore += randomNumber;
         document.querySelector('#round-player-' + activePlayer).textContent = roundScore;
+        diceImg.classList.toggle("animation");
       } else {
+        lostRoundSound.play();
+        diceImg.classList.toggle("animation");
         nextPlayer();
       }    
-    }, 1000);
+    }, 1500);
    } 
 }
 
 const holdScore = () => {
   if(!isGameOver) {
+    holdScoreSound.play();
     globalScores[activePlayer] += roundScore;
     document.querySelector('#global-' + activePlayer).textContent = globalScores[activePlayer];
 
     if(globalScores[activePlayer] >= 100) {
+      winnerSound.play();
       document.querySelector('#name-' + activePlayer).textContent = `PLAYER ${activePlayer + 1} WON !`;
+      document.querySelector('#name-' + activePlayer).style.color = "#2E8B57";
       document.querySelector('img').style.display = "none";
       document.querySelector('.player-area-' + activePlayer).classList.add('winner');
 

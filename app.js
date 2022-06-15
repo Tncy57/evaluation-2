@@ -8,18 +8,7 @@ let isGameOver, globalScores, roundScore, activePlayer;
 const play = document.querySelector("#play");
 play.style.display = "none";
 
-function startGame() {
-  isGameOver = false;
-  globalScores = [0, 0];
-  activePlayer = 0;
-  roundScore = 0;
-  diceImg.style.display = "none";
-  play.style.display = "block";
-}
-
-startGame();
-
-play.addEventListener("click", () => {
+const countDown = () => {
   document.querySelector("#play").remove();
 
   setTimeout(() => {
@@ -34,27 +23,54 @@ play.addEventListener("click", () => {
           document.querySelector("#one").style.display = "none";
           // Showing the Dice
           diceImg.style.display = "block";
+
+          // Showing the buttons
+          newGameButton.style.display = "block";
+          rollButton.style.display = "block";
+          holdButton.style.display = "block";
         }, 1000);
       }, 1000);
     }, 1000);
   }, 500);
-})
+}
+
+function startGame() {
+  isGameOver = false;
+  globalScores = [0, 0];
+  activePlayer = 0;
+  roundScore = 0;
+  diceImg.style.display = "none";
+  play.style.display = "block";
+
+  newGameButton.style.display = "none";
+  rollButton.style.display = "none";
+  holdButton.style.display = "none";
+
+  // Count down 
+  play.addEventListener("click", countDown);
+ 
+}
+
+startGame();
+
+
+
+// play.addEventListener("click", counter);
 
 const rollDice = () => {
   
    if(!isGameOver) {
-    const randomNumber = Math.floor(Math.random() * 6) + 1;
 
-    //let diceImg = document.querySelector("img");
-    
-    diceImg.src = `diceImg/dice${randomNumber}.png`;  
-
-    if(randomNumber !== 1) {
-      roundScore += randomNumber;
-      document.querySelector('#round-player-' + activePlayer).textContent = roundScore;
-    } else {
-      nextPlayer();
-    }    
+    setTimeout(() => {
+      const randomNumber = Math.floor(Math.random() * 6) + 1; 
+      diceImg.src = `diceImg/dice${randomNumber}.png`;
+      if(randomNumber !== 1) {
+        roundScore += randomNumber;
+        document.querySelector('#round-player-' + activePlayer).textContent = roundScore;
+      } else {
+        nextPlayer();
+      }    
+    }, 1000);
    } 
 }
 

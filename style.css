@@ -147,3 +147,12 @@ img {
 img.animation {
   animation: 0.2s ease infinite alternate shakeDice;
 }
+
+.rules {
+  position: absolute;
+  top: 0;
+  right: 1%;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(164, 161, 161);
+}

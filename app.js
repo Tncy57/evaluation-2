@@ -92,7 +92,7 @@ const holdScore = () => {
     globalScores[activePlayer] += roundScore;
     document.querySelector('#global-' + activePlayer).textContent = globalScores[activePlayer];
 
-    if(globalScores[activePlayer] >= 10) {
+    if(globalScores[activePlayer] >= 100) {
       winnerSound.play();
       document.querySelector('#name-' + activePlayer).textContent = `PLAYER ${activePlayer + 1} WON !`;
       document.querySelector('#name-' + activePlayer).style.color = "#2E8B57";

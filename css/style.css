@@ -10,7 +10,6 @@ body {
   background: linear-gradient(45deg, rgb(206, 197, 152), rgb(203, 190, 135), rgb(173, 124, 85));
 }
 
-
 .container-md {
   position: relative;
   background-color: white;
@@ -51,7 +50,6 @@ body {
 }
 
 .current-box {
-  /*width: 40%;*/
   background-color:#eb5454;
   margin: 0 auto;
   padding: 1px 8px;
@@ -114,18 +112,22 @@ i {
   margin-top: 15px;
 }
 
-.numbers {
+.count-down-numbers {
   display: none;
   color: #eb5454;
   font-size: 2rem;
   font-weight: 600;
-  margin-top: 15px;
+  margin: 15px 0 18px 26px;
 }
 
 .play-label { margin-left: 15px; }
-.numbers { 
-  margin-left: 26px; 
-  margin-bottom: 18px;
+
+img {
+  height: 50px;
+  width: 50px;
+  margin: 10px 0 0 12px;
+  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+  border-radius: 4px;
 }
 
 /* Little animation for the Dice */
@@ -135,14 +137,6 @@ i {
   50% { transform: rotate(0); }
   75% { transform: rotate(15deg); }
   100% { transform: rotate(0); }
-}
-
-img {
-  height: 50px;
-  width: 50px;
-  margin: 10px 0 0 12px;
-  box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
-  border-radius: 4px;
 }
 
 img.animation {

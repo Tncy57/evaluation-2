@@ -1,16 +1,15 @@
 @media screen and (min-width: 400px) {
   img { margin-left: 20px; }
   .play-label { margin-left: 22px; }
-  .numbers { margin-left: 34px; }
+  .count-down-numbers { margin-left: 34px; }
   .hold { bottom: 30px; }
 }
 
 @media screen and (min-width: 500px) {
   img { margin-left: 35px; }
   .play-label { margin-left: 35px; }
-  .numbers { margin-left: 45px; }
-  .new { left: 40%; }
-  .roll { left: 40%; }
+  .count-down-numbers { margin-left: 45px; }
+  .new, .roll { left: 40%; }
   .hold { left: 43%; }
 }
 
@@ -18,24 +17,33 @@
   .container-md { min-height: 80%; }
   .row { height: 90vh; }
   .player-area-0, .player-area-1 { height: 100%; }
-  .play-label { margin-left: 35px; margin-top: 70px; font-size: 25px; transition: 0.8s; }
+
+  .play-label {
+    margin-left: 35px;
+    margin-top: 70px;
+    font-size: 25px;
+    transition: 0.8s;
+  }
+
   .play-label:hover {
     background-color: #eb2121;
     color: white;
     font-weight: 900;
   }
   
-  .numbers { 
+  .count-down-numbers { 
     margin-left: 50px; 
     margin-top: 60px; 
     font-size: 70px;
   }
+
   img { 
     height: 75px;
     width: 75px;
     margin-top: 55px;
     margin-right: 10px;
   }
+  
   .new { top: 5%; left: 42%; }
   .roll { bottom: 30%; left: 42%; }
   .hold { bottom: 21%; left: 45%; }
@@ -58,7 +66,7 @@
     padding: 5px 15px;
   }
 
-  .numbers {
+  .count-down-numbers {
     margin-left: 110px; 
     margin-top: 120px; 
     font-size: 70px;

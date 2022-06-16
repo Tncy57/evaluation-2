@@ -148,11 +148,14 @@ img.animation {
   animation: 0.2s ease infinite alternate shakeDice;
 }
 
-.rules {
+img:hover { cursor: pointer; }
+
+.winning-score {
   position: absolute;
   top: 0;
   right: 1%;
-  font-size: 12px;
+  font-size: 8px;
   font-weight: bold;
   color: rgb(164, 161, 161);
 }
+

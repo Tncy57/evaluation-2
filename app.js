@@ -111,6 +111,7 @@ const holdScore = () => {
 }
 
 rollButton.addEventListener("click", rollDice);
+diceImg.addEventListener("click", rollDice);
 holdButton.addEventListener("click", holdScore);
 //newGameButton.addEventListener("click", startGame);
 

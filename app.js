@@ -8,8 +8,6 @@ let isGameOver, globalScores, roundScore, activePlayer;
 const play = document.querySelector("#play");
 play.style.display = "none";
 
-
-
 const countDown = () => {
   document.querySelector("#play").remove();
   
@@ -59,10 +57,11 @@ function startGame() {
 startGame();
 
 // Putting dice and count sound
-let diceSound = new Audio("sounds/dice-sound.wav");
-let lostRoundSound = new Audio("sounds/lost-round.wav");
-let holdScoreSound = new Audio("sounds/hold-score.wav");
-let winnerSound =  new Audio("sounds/winner-sound.wav");
+const diceSound = new Audio("sounds/dice-sound.wav");
+const lostRoundSound = new Audio("sounds/lost-round.wav");
+const holdScoreSound = new Audio("sounds/hold-coin.wav");
+const winnerSound =  new Audio("sounds/winner-sound.wav");
+const newGameSound = new Audio("sounds/new-game-sound.wav")
 
 const rollDice = () => {
   
@@ -93,10 +92,12 @@ const holdScore = () => {
     globalScores[activePlayer] += roundScore;
     document.querySelector('#global-' + activePlayer).textContent = globalScores[activePlayer];
 
-    if(globalScores[activePlayer] >= 100) {
+    if(globalScores[activePlayer] >= 10) {
       winnerSound.play();
       document.querySelector('#name-' + activePlayer).textContent = `PLAYER ${activePlayer + 1} WON !`;
       document.querySelector('#name-' + activePlayer).style.color = "#2E8B57";
+      document.querySelector('#name-' + activePlayer).style.fontWeight = "bold";
+
       document.querySelector('img').style.display = "none";
       document.querySelector('.player-area-' + activePlayer).classList.add('winner');
 
@@ -110,10 +111,50 @@ const holdScore = () => {
   }
 }
 
+const newGame = () => {
+
+  newGameSound.play();
+
+  isGameOver = false;
+  globalScores = [0, 0];
+  //activePlayer = 0;
+  roundScore = 0;
+  diceImg.style.display = "block";
+  
+  // Reset Round Scores
+  document.querySelector('#round-player-0').textContent = 0;
+  document.querySelector('#round-player-1').textContent = 0;
+
+  // Reset Global Scores
+  document.querySelector('#global-0').textContent = 0;
+  document.querySelector('#global-1').textContent = 0;
+
+  // Reset Font Weight
+  document.querySelector('#global-0').style.fontWeight = "normal";
+  document.querySelector('#global-1').style.fontWeight = "normal";
+
+  // Reset Winner status
+  document.querySelector('#name-' + activePlayer).textContent = `PLAYER ${activePlayer + 1}`;
+  document.querySelector('#name-' + activePlayer).style.color = `rgb(105, 105, 105)`;
+
+  document.querySelector('.player-area-' + activePlayer).classList.remove('winner');
+
+  // Giving Player 1 active status
+  activePlayer = 0;
+  document.querySelector(".player-area-0").classList.add("active");
+  document.querySelector(".player-area-1").classList.remove("active");
+  document.querySelector(".active-0").classList.add("active-point");
+  document.querySelector(".active-1").classList.remove("active-point");
+  document.querySelector('#name-0').style.fontWeight = "bold";
+  document.querySelector('#name-1').style.fontWeight = "normal";
+
+
+}
+
 rollButton.addEventListener("click", rollDice);
 diceImg.addEventListener("click", rollDice);
 holdButton.addEventListener("click", holdScore);
-//newGameButton.addEventListener("click", startGame);
+newGameButton.addEventListener("click", newGame);
 
 function nextPlayer() {
   // Ternary operator

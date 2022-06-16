@@ -98,6 +98,7 @@ i {
 .winner {
   font-weight: 800;
   color: #eb5454;
+  background-color: rgb(237, 234, 234);
 }
 
 .play-label {

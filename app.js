@@ -11,7 +11,7 @@ play.style.display = "none";
 const countDown = () => {
   document.querySelector("#play").remove();
   
-  let countSound = new Audio("sounds/count-sound.wav")
+  const countSound = new Audio("sounds/count-sound.wav")
   
   setTimeout(() => {
     countSound.play();
@@ -117,6 +117,7 @@ const newGame = () => {
 
   isGameOver = false;
   globalScores = [0, 0];
+
   //activePlayer = 0;
   roundScore = 0;
   diceImg.style.display = "block";
@@ -147,8 +148,6 @@ const newGame = () => {
   document.querySelector(".active-1").classList.remove("active-point");
   document.querySelector('#name-0').style.fontWeight = "bold";
   document.querySelector('#name-1').style.fontWeight = "normal";
-
-
 }
 
 rollButton.addEventListener("click", rollDice);
@@ -161,6 +160,8 @@ function nextPlayer() {
   activePlayer === 0 ? activePlayer = 1 : activePlayer = 0; 
   
   roundScore = 0;
+
+  //document.querySelector('#name-' + activePlayer).style.fontWeight = "bold";
 
   document.querySelector(".active-0").classList.toggle("active-point");
   document.querySelector(".active-1").classList.toggle("active-point");

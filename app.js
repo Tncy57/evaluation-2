@@ -106,6 +106,7 @@ const holdScore = () => {
 
       isGameOver = true;
     } else {
+      document.querySelector('#name-' + activePlayer).style.fontWeight = "normal";
       nextPlayer();
     }
   }
@@ -161,7 +162,7 @@ function nextPlayer() {
   
   roundScore = 0;
 
-  //document.querySelector('#name-' + activePlayer).style.fontWeight = "bold";
+  document.querySelector('#name-' + activePlayer).style.fontWeight = "bold";
 
   document.querySelector(".active-0").classList.toggle("active-point");
   document.querySelector(".active-1").classList.toggle("active-point");

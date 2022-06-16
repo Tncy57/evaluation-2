@@ -79,6 +79,7 @@ const rollDice = () => {
         diceImg.classList.toggle("animation");
       } else {
         lostRoundSound.play();
+        document.querySelector('#name-' + activePlayer).style.fontWeight = "normal";
         diceImg.classList.toggle("animation");
         nextPlayer();
       }    

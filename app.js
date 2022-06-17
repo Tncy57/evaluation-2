@@ -51,7 +51,6 @@ function startGame() {
 
   // Count down 
   play.addEventListener("click", countDown);
- 
 }
 
 startGame();
@@ -63,10 +62,8 @@ const holdScoreSound = new Audio("sounds/hold-coin.wav");
 const winnerSound =  new Audio("sounds/winner-sound.wav");
 const newGameSound = new Audio("sounds/new-game-sound.wav")
 
-const rollDice = () => {
-  
+const rollDice = () => {  
    if(!isGameOver) {
-
     diceImg.classList.toggle("animation");
     diceSound.play();
 
@@ -84,6 +81,7 @@ const rollDice = () => {
         nextPlayer();
       }    
     }, 1500);
+    
    } 
 }
 
@@ -114,7 +112,6 @@ const holdScore = () => {
 }
 
 const newGame = () => {
-
   newGameSound.play();
 
   isGameOver = false;
@@ -142,7 +139,7 @@ const newGame = () => {
 
   document.querySelector('.player-area-' + activePlayer).classList.remove('winner');
 
-  // Giving Player 1 active status
+  // Giving to Player 1 the active status again
   activePlayer = 0;
   document.querySelector(".player-area-0").classList.add("active");
   document.querySelector(".player-area-1").classList.remove("active");

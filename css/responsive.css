@@ -17,10 +17,8 @@
   .container-md { min-height: 80%; }
   .row { height: 90vh; }
   .player-area-0, .player-area-1 { height: 100%; }
-
   .play-label {
-    margin-left: 35px;
-    margin-top: 70px;
+    margin: 70px 0 0 35px;
     font-size: 25px;
     transition: 0.8s;
   }
@@ -61,8 +59,7 @@
 
 @media screen and (min-width: 1024px) {
   .play-label { 
-    margin-top: 120px;
-    margin-left: 80px;
+    margin: 120px 0 0 50px;
     padding: 5px 15px;
   }
 
@@ -89,4 +86,12 @@
   .new { top: 5%; left: 44%; }
   .roll { bottom: 30%; left: 44%; }
   .hold { bottom: 21%; left: 46%; }
+}
+
+@media screen and (min-width: 1200px) {
+  .play-label { margin-left: 65px; }
+}
+
+@media screen and (min-width: 1400px) {
+  .play-label { margin-left: 85px; }
 }

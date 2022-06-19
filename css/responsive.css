@@ -90,6 +90,10 @@
 
 @media screen and (min-width: 1200px) {
   .play-label { margin-left: 65px; }
+  img { margin-left: 50px; }
+  .count-down-numbers { margin-left: 88px; }
+  .roll { bottom: 27%; }
+  .hold { bottom: 15%; }
 }
 
 @media screen and (min-width: 1400px) {

@@ -11,7 +11,7 @@ play.style.display = "none";
 const countDown = () => {
   document.querySelector("#play").remove();
   
-  const countSound = new Audio("sounds/count-sound.wav")
+  const countSound = new Audio("sounds/count-sound.wav");
   
   setTimeout(() => {
     countSound.play();
@@ -60,7 +60,7 @@ const diceSound = new Audio("sounds/dice-sound.wav");
 const lostRoundSound = new Audio("sounds/lost-round.wav");
 const holdScoreSound = new Audio("sounds/hold-coin.wav");
 const winnerSound =  new Audio("sounds/winner-sound.wav");
-const newGameSound = new Audio("sounds/new-game-sound.wav")
+const newGameSound = new Audio("sounds/new-game-sound.wav");
 
 const rollDice = () => {  
    if(!isGameOver) {
@@ -117,7 +117,6 @@ const newGame = () => {
   isGameOver = false;
   globalScores = [0, 0];
 
-  //activePlayer = 0;
   roundScore = 0;
   diceImg.style.display = "block";
   
